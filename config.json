@@ -1,7 +1,7 @@
 {
-  "first_app": "",
-  "change_calculator": "",
-  "mortgage_calculator": "",
-  "top_spots": "",
-  "vstda": ""
+  "first_app": "https://enigmatic-beach-80965.herokuapp.com/",
+  "change_calculator": "https://adb-change-calculator.herokuapp.com/",
+  "mortgage_calculator": "https://adb-mortgage-calculator.herokuapp.com/",
+  "top_spots": "https://adb-sd-top-spots.herokuapp.com/",
+  "vstda": "https://adb-vstda.herokuapp.com/"
 }

@@ -3,6 +3,8 @@ const path = require('path');
 module.exports = {
   context: path.join(__dirname, '/src'),
 
+  devtool: 'source-map',
+
   entry: {
     javascript: './js/index'
   },
@@ -16,19 +18,25 @@ module.exports = {
     alias: {
       react: path.join(__dirname, 'node_modules', 'react')
     },
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
 
+  mode: 'production',
+
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loaders: ['babel-loader'],
+        use: [{
+          loader: 'babel-loader'
+        }]
       },
       {
         test: /\.html$/,
-        loader: 'file?name=[name].[ext]',
+        use: [{
+          loader: 'file?name=[name].[ext]'
+        }]
       },
     ],
   },
